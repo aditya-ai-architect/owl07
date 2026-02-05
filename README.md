@@ -1,14 +1,23 @@
 <div align="center">
 
-# owl07
+<br>
 
-**Project-first MCP server manager.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner.svg">
+  <img alt="owl07 - Project-first MCP server manager" src="assets/banner.svg" width="680">
+</picture>
+
+<br>
+
 **Like `.env` + Homebrew for MCP servers.**
 
 [![npm](https://img.shields.io/npm/v/owl07?color=58A6FF&style=flat-square)](https://www.npmjs.com/package/owl07)
+[![CI](https://img.shields.io/github/actions/workflow/status/aditya-ai-architect/owl07/ci.yml?style=flat-square&label=CI)](https://github.com/aditya-ai-architect/owl07/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-3FB950?style=flat-square)](https://opensource.org/licenses/MIT)
 [![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-BC8CFF?style=flat-square)](https://modelcontextprotocol.io)
+[![Node](https://img.shields.io/badge/Node-%3E%3D20-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 
 </div>
 
@@ -40,9 +49,11 @@ npx owl07 init
 # Initialize in your project
 npx owl07 init
 
-# Add servers
+# Start with a template (web, python, fullstack, devops, data, minimal)
+npx owl07 use fullstack
+
+# Or add servers manually
 npx owl07 add-json filesystem '{"command":"npx","args":["-y","@modelcontextprotocol/server-filesystem","${workspaceFolder}"]}'
-npx owl07 add-json github '{"command":"npx","args":["-y","@modelcontextprotocol/server-github"],"env":{"GITHUB_TOKEN":"${env:GITHUB_TOKEN}"}}'
 
 # See what you've got
 npx owl07 list
@@ -53,6 +64,28 @@ npx owl07 sync
 # Health check
 npx owl07 doctor
 ```
+
+---
+
+## CLI Preview
+
+<div align="center">
+<img src="assets/demo.svg" alt="owl07 CLI demo" width="680">
+</div>
+
+The CLI features an animated owl-eyes banner that plays on startup:
+
+```
+   ╭───────╮     ╭───────╮    ██  █   █ █      ██  ████
+   │       │     │       │   █  █ █   █ █     █  █    █
+   │   ◉   │     │   ◉   │   █  █ █ █ █ █     █  █   █
+   │       │     │       │   █  █ ██ ██ █     █  █  █
+   ╰───────╯     ╰───────╯    ██   █ █  ████   ██  █
+
+   v0.1.0 · Project-first MCP server manager
+```
+
+The eyes animate in TTY terminals -- they look around, blink, and glow. Non-TTY environments (pipes, CI) get the static version.
 
 ---
 
@@ -82,8 +115,7 @@ npx owl07 doctor
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"],
-      "disabled": false
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${workspaceFolder}"]
     },
     "github": {
       "command": "npx",
@@ -126,7 +158,7 @@ Variables stay as templates in `.owl07.json` and are resolved at sync time -- ma
 | `owl07 sync --dry` | Preview sync without writing files |
 | `owl07 doctor` | Health check all servers + system deps |
 | `owl07 import` | Import from existing client configs |
-| `owl07 use <template>` | Apply preset template (web, python, fullstack, devops, data, minimal) |
+| `owl07 use <template>` | Apply preset template |
 | `owl07 env` | Audit environment variables referenced in config |
 | `owl07 diff` | Show diff between `.owl07.json` and client configs |
 | `owl07 enable <name>` | Enable a disabled server |
@@ -162,7 +194,7 @@ Templates merge into your existing config -- they never overwrite servers you al
 | **Zero install** | `npx owl07` | `pip install` | Go binary | Docker |
 | **Health checks** | JSON-RPC ping | No | No | No |
 | **Import existing** | From all clients | No | Scan only | No |
-| **Language** | TypeScript | Python | Go | TypeScript |
+| **Templates** | 6 presets | No | No | No |
 
 ---
 
@@ -170,8 +202,7 @@ Templates merge into your existing config -- they never overwrite servers you al
 
 | Client | Config Path |
 |--------|-------------|
-| **Claude Desktop** | `%APPDATA%\Claude\claude_desktop_config.json` (Win) |
-| | `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) |
+| **Claude Desktop** | `%APPDATA%\Claude\claude_desktop_config.json` (Win) / `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) |
 | **Cursor** | `.cursor/mcp.json` (project) |
 | **Claude Code** | `.mcp.json` (project) |
 
@@ -181,7 +212,7 @@ owl07 **merges** your servers into existing configs -- it never deletes servers 
 
 ## Requirements
 
-- **Node.js** >= 18.0.0
+- **Node.js** >= 20.0.0
 - **npm** >= 8.0.0
 
 ---

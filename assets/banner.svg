@@ -1,0 +1,132 @@
+<svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .term { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace; }
+    </style>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect rx="10" ry="10" width="720" height="320" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect rx="10" ry="10" width="720" height="38" fill="#161b22"/>
+  <rect y="28" width="720" height="10" fill="#161b22"/>
+
+  <!-- Traffic lights -->
+  <circle cx="24" cy="19" r="7" fill="#ff5f56"/>
+  <circle cx="46" cy="19" r="7" fill="#ffbd2e"/>
+  <circle cx="68" cy="19" r="7" fill="#27c93f"/>
+
+  <!-- Terminal title -->
+  <text x="360" y="23" text-anchor="middle" fill="#8b949e" font-size="12" class="term">owl07</text>
+
+  <!-- Left eye box -->
+  <g transform="translate(60, 65)">
+    <!-- Box border -->
+    <rect rx="6" ry="6" width="80" height="80" fill="none" stroke="#484f58" stroke-width="1.5"/>
+    <!-- Pupil - open state -->
+    <circle cx="40" cy="40" r="14" fill="#58A6FF" opacity="1">
+      <animate attributeName="r" values="14;14;14;14;1;14;14;14" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="40;40;35;45;40;40;40;40" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="40" r="6" fill="#0d1117">
+      <animate attributeName="r" values="6;6;6;6;0;6;6;6" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="40;40;35;45;40;40;40;40" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Glow pulse -->
+    <circle cx="40" cy="40" r="14" fill="none" stroke="#58A6FF" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0;0;0.6;0;0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="14;14;14;14;14;22;14;14" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Right eye box -->
+  <g transform="translate(180, 65)">
+    <rect rx="6" ry="6" width="80" height="80" fill="none" stroke="#484f58" stroke-width="1.5"/>
+    <circle cx="40" cy="40" r="14" fill="#58A6FF" opacity="1">
+      <animate attributeName="r" values="14;14;14;14;1;14;14;14" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="40;40;35;45;40;40;40;40" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="40" r="6" fill="#0d1117">
+      <animate attributeName="r" values="6;6;6;6;0;6;6;6" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="40;40;35;45;40;40;40;40" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40" cy="40" r="14" fill="none" stroke="#58A6FF" stroke-width="2" opacity="0">
+      <animate attributeName="opacity" values="0;0;0;0;0;0.6;0;0" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="14;14;14;14;14;22;14;14" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- OWL07 block text -->
+  <g transform="translate(310, 72)" fill="#58A6FF">
+    <!-- O -->
+    <rect x="6" y="0" width="12" height="4" rx="1"/>
+    <rect x="0" y="4" width="6" height="4" rx="1"/>
+    <rect x="18" y="4" width="6" height="4" rx="1"/>
+    <rect x="0" y="8" width="6" height="4" rx="1"/>
+    <rect x="18" y="8" width="6" height="4" rx="1"/>
+    <rect x="0" y="12" width="6" height="4" rx="1"/>
+    <rect x="18" y="12" width="6" height="4" rx="1"/>
+    <rect x="6" y="16" width="12" height="4" rx="1"/>
+
+    <!-- W -->
+    <rect x="32" y="0" width="6" height="4" rx="1"/>
+    <rect x="56" y="0" width="6" height="4" rx="1"/>
+    <rect x="32" y="4" width="6" height="4" rx="1"/>
+    <rect x="56" y="4" width="6" height="4" rx="1"/>
+    <rect x="32" y="8" width="6" height="4" rx="1"/>
+    <rect x="44" y="8" width="6" height="4" rx="1"/>
+    <rect x="56" y="8" width="6" height="4" rx="1"/>
+    <rect x="32" y="12" width="12" height="4" rx="1"/>
+    <rect x="50" y="12" width="12" height="4" rx="1"/>
+    <rect x="38" y="16" width="6" height="4" rx="1"/>
+    <rect x="50" y="16" width="6" height="4" rx="1"/>
+
+    <!-- L -->
+    <rect x="70" y="0" width="6" height="4" rx="1"/>
+    <rect x="70" y="4" width="6" height="4" rx="1"/>
+    <rect x="70" y="8" width="6" height="4" rx="1"/>
+    <rect x="70" y="12" width="6" height="4" rx="1"/>
+    <rect x="70" y="16" width="24" height="4" rx="1"/>
+  </g>
+
+  <g transform="translate(420, 72)" fill="#BC8CFF">
+    <!-- 0 -->
+    <rect x="6" y="0" width="12" height="4" rx="1"/>
+    <rect x="0" y="4" width="6" height="4" rx="1"/>
+    <rect x="18" y="4" width="6" height="4" rx="1"/>
+    <rect x="0" y="8" width="6" height="4" rx="1"/>
+    <rect x="18" y="8" width="6" height="4" rx="1"/>
+    <rect x="0" y="12" width="6" height="4" rx="1"/>
+    <rect x="18" y="12" width="6" height="4" rx="1"/>
+    <rect x="6" y="16" width="12" height="4" rx="1"/>
+
+    <!-- 7 -->
+    <rect x="32" y="0" width="24" height="4" rx="1"/>
+    <rect x="50" y="4" width="6" height="4" rx="1"/>
+    <rect x="44" y="8" width="6" height="4" rx="1"/>
+    <rect x="38" y="12" width="6" height="4" rx="1"/>
+    <rect x="32" y="16" width="6" height="4" rx="1"/>
+  </g>
+
+  <!-- Version -->
+  <text x="310" y="110" fill="#484f58" font-size="13" class="term">v0.1.0</text>
+
+  <!-- Tagline -->
+  <text x="60" y="180" fill="#8b949e" font-size="13" class="term">Project-first MCP server manager</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="200" x2="660" y2="200" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Command demo -->
+  <text x="60" y="228" fill="#6e7681" font-size="12" class="term">$</text>
+  <text x="78" y="228" fill="#e6edf3" font-size="12" class="term">npx owl07 init</text>
+
+  <text x="60" y="250" fill="#3fb950" font-size="12" class="term">&#10003; Created .owl07.json</text>
+
+  <text x="60" y="278" fill="#6e7681" font-size="12" class="term">$</text>
+  <text x="78" y="278" fill="#e6edf3" font-size="12" class="term">npx owl07 use fullstack</text>
+
+  <text x="60" y="300" fill="#3fb950" font-size="12" class="term">&#10003; Applied template fullstack (5 servers)</text>
+</svg>

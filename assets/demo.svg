@@ -1,0 +1,87 @@
+<svg viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .t { font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace; font-size: 12px; }
+      .dim { fill: #6e7681; }
+      .txt { fill: #e6edf3; }
+      .grn { fill: #3fb950; }
+      .blu { fill: #58A6FF; }
+      .vio { fill: #BC8CFF; }
+      .ora { fill: #FFA657; }
+      .red { fill: #f85149; }
+      .wht { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Terminal window -->
+  <rect rx="10" ry="10" width="720" height="520" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect rx="10" ry="10" width="720" height="38" fill="#161b22"/>
+  <rect y="28" width="720" height="10" fill="#161b22"/>
+  <circle cx="24" cy="19" r="7" fill="#ff5f56"/>
+  <circle cx="46" cy="19" r="7" fill="#ffbd2e"/>
+  <circle cx="68" cy="19" r="7" fill="#27c93f"/>
+  <text x="360" y="23" text-anchor="middle" fill="#8b949e" font-size="12" class="t">owl07 list &amp; status</text>
+
+  <!-- owl07 list output -->
+  <text x="30" y="65" class="t dim">$</text>
+  <text x="48" y="65" class="t txt">owl07 list</text>
+
+  <text x="30" y="90" class="t dim">       Server                Command       Args</text>
+  <text x="30" y="106" class="t dim">  ---  --------------------  ------------  ----------------------------------------</text>
+
+  <!-- Server rows -->
+  <text x="30" y="124" class="t grn">  &#9679;</text>
+  <text x="66" y="124" class="t txt">filesystem</text>
+  <text x="246" y="124" class="t dim">npx</text>
+  <text x="372" y="124" class="t dim">-y @modelcontextprotocol/server-filesystem</text>
+
+  <text x="30" y="142" class="t grn">  &#9679;</text>
+  <text x="66" y="142" class="t txt">github</text>
+  <text x="246" y="142" class="t dim">npx</text>
+  <text x="372" y="142" class="t dim">-y @modelcontextprotocol/server-github</text>
+
+  <text x="30" y="160" class="t red">  &#9675;</text>
+  <text x="66" y="160" class="t dim">postgres</text>
+  <text x="246" y="160" class="t dim">npx</text>
+  <text x="372" y="160" class="t dim">-y @modelcontextprotocol/server-postgres</text>
+
+  <text x="30" y="178" class="t grn">  &#9679;</text>
+  <text x="66" y="178" class="t txt">puppeteer</text>
+  <text x="246" y="178" class="t dim">npx</text>
+  <text x="372" y="178" class="t dim">-y @modelcontextprotocol/server-puppeteer</text>
+
+  <text x="30" y="196" class="t grn">  &#9679;</text>
+  <text x="66" y="196" class="t txt">memory</text>
+  <text x="246" y="196" class="t dim">npx</text>
+  <text x="372" y="196" class="t dim">-y @modelcontextprotocol/server-memory</text>
+
+  <text x="30" y="220" class="t dim">  5 server(s) configured</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="238" x2="690" y2="238" stroke="#21262d" stroke-width="1"/>
+
+  <!-- owl07 status output -->
+  <text x="30" y="260" class="t dim">$</text>
+  <text x="48" y="260" class="t txt">owl07 status</text>
+
+  <text x="30" y="286" class="t grn">  &#9679; filesystem &#8594; enabled</text>
+  <text x="30" y="304" class="t grn">  &#9679; github &#8594; enabled</text>
+  <text x="30" y="322" class="t red">  &#9675; postgres &#8594; disabled</text>
+  <text x="30" y="340" class="t grn">  &#9679; puppeteer &#8594; enabled</text>
+  <text x="30" y="358" class="t grn">  &#9679; memory &#8594; enabled</text>
+
+  <text x="30" y="384" class="t txt">  4 enabled, 1 disabled</text>
+  <text x="30" y="402" class="t dim">  Sync targets: claude-desktop, cursor, claude-code</text>
+
+  <!-- Divider -->
+  <line x1="30" y1="420" x2="690" y2="420" stroke="#21262d" stroke-width="1"/>
+
+  <!-- owl07 sync output -->
+  <text x="30" y="442" class="t dim">$</text>
+  <text x="48" y="442" class="t txt">owl07 sync</text>
+
+  <text x="30" y="464" class="t grn">  &#10003; Synced to Claude Desktop (4 servers)</text>
+  <text x="30" y="482" class="t grn">  &#10003; Synced to Cursor (4 servers)</text>
+  <text x="30" y="500" class="t grn">  &#10003; Synced to Claude Code (4 servers)</text>
+</svg>
