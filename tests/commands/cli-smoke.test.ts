@@ -47,10 +47,18 @@ afterEach(async () => {
   await rm(tempDir, { recursive: true, force: true });
 });
 
+function expectSuccess(result: { stdout: string; stderr: string; exitCode: number }) {
+  if (result.exitCode !== 0) {
+    console.error('CLI STDERR:', result.stderr);
+    console.error('CLI STDOUT:', result.stdout);
+  }
+  expect(result.exitCode).toBe(0);
+}
+
 describe('CLI smoke tests', () => {
   it('shows help', async () => {
     const result = await runCli(['--help'], tempDir);
-    expect(result.exitCode).toBe(0);
+    expectSuccess(result);
     expect(result.stdout).toContain('owl07');
     expect(result.stdout).toContain('init');
     expect(result.stdout).toContain('sync');
@@ -58,7 +66,7 @@ describe('CLI smoke tests', () => {
 
   it('shows version', async () => {
     const result = await runCli(['--version'], tempDir);
-    expect(result.exitCode).toBe(0);
+    expectSuccess(result);
     expect(result.stdout.trim()).toBe('0.1.0');
   });
 
